@@ -7,7 +7,7 @@ export const profile = {
   name: "Sarath Surendran",
   title: "Cybersecurity Engineer",
   tagline:
-    "Cloud security, identity and vulnerability management across Azure, AWS, Microsoft 365 and on-prem.",
+    "Cloud, hybrid and on-premises security. Identity, vulnerability management and DevSecOps across Azure, AWS and Microsoft 365.",
   location: "Dublin, Ireland",
   email: "sarath2552@gmail.com",
   linkedin: "https://www.linkedin.com/in/sarath-surendran",
