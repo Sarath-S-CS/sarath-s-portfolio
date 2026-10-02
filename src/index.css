@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Dark-navy palette with electric-blue accents.
+ * Tokens are shadcn-style (HSL channels, consumed as hsl(var(--token))).
+ * This design commits to a single dark theme on purpose.
+ */
+@layer base {
+  :root {
+    --background: 222 56% 6%;        /* deep navy #060b18 */
+    --foreground: 210 40% 96%;       /* near-white */
+
+    --card: 222 45% 9%;              /* raised navy */
+    --card-foreground: 210 40% 96%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 25% 68%; /* slate-blue secondary text */
+
+    --primary: 210 100% 56%;         /* electric blue #1f8fff */
+    --primary-foreground: 222 56% 6%;
+
+    --accent: 190 95% 55%;           /* cyan highlight */
+
+    --border: 217 33% 20%;
+    --input: 217 33% 20%;
+    --ring: 210 100% 56%;
+
+    --radius: 0.875rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* The sticky navbar is ~4rem; keep anchored sections clear of it. */
+    scroll-padding-top: 5rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--primary));
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+}
+
+@layer utilities {
+  /* A soft electric-blue radial glow used behind headings. */
+  .glow-text {
+    text-shadow: 0 0 40px hsl(var(--primary) / 0.35);
+  }
+}
