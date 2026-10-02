@@ -1,4 +1,4 @@
-import { GlowingShadow } from "@/components/ui/glowing-shadow";
+import { Button as MovingBorderCard } from "@/components/ui/moving-border";
 import { about, skills } from "@/data/content";
 
 // Section heading used across About, Skills, Projects and Contact.
@@ -32,24 +32,30 @@ export function About() {
       <section id="skills" className="mx-auto max-w-6xl px-5 py-24 sm:px-8">
         <SectionHeading eyebrow="Skills" title="What I work with" />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {skills.map((group) => (
-            <GlowingShadow key={group.group} radius={18} className="h-full">
-              <div className="flex h-full flex-col rounded-[18px] border border-border bg-card p-6 transition-transform duration-200 hover:-translate-y-1">
-                <h3 className="mb-4 font-display text-lg font-semibold text-foreground">
-                  {group.group}
-                </h3>
-                <ul className="flex flex-wrap gap-2">
-                  {group.items.map((item) => (
-                    <li
-                      key={item}
-                      className="rounded-lg border border-border bg-muted/40 px-2.5 py-1 text-sm text-muted-foreground"
-                    >
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </GlowingShadow>
+          {skills.map((group, i) => (
+            <MovingBorderCard
+              key={group.group}
+              as="div"
+              borderRadius="1.25rem"
+              duration={3200 + i * 350}
+              containerClassName="h-full w-full"
+              borderClassName="bg-[radial-gradient(#1f8fff_35%,transparent_60%)]"
+              className="flex-col items-stretch justify-start bg-card p-6 text-left"
+            >
+              <h3 className="mb-4 font-display text-lg font-semibold text-foreground">
+                {group.group}
+              </h3>
+              <ul className="flex flex-wrap gap-2">
+                {group.items.map((item) => (
+                  <li
+                    key={item}
+                    className="rounded-lg border border-border bg-muted/40 px-2.5 py-1 text-sm text-muted-foreground"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </MovingBorderCard>
           ))}
         </div>
       </section>

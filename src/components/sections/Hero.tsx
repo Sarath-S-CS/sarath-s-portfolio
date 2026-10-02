@@ -11,11 +11,11 @@ export function Hero() {
       <WavyBackground
         containerClassName="relative h-[100svh] min-h-[560px] overflow-hidden"
         className="relative mx-auto flex max-w-4xl flex-col items-center px-5 text-center"
-        colors={["#1f8fff", "#0ea5e9", "#22d3ee", "#60a5fa", "#2563eb"]}
+        colors={["#38bdf8", "#22d3ee", "#3b82f6", "#60a5fa", "#0ea5e9"]}
         backgroundFill="#060b18"
-        waveOpacity={0.4}
-        blur={10}
-        speed="slow"
+        waveOpacity={0.62}
+        blur={7}
+        speed="fast"
       >
         {/* Soft navy backdrop so text stays legible over any wave position. */}
         <div
@@ -23,7 +23,7 @@ export function Hero() {
           className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[150%] w-[150%] -translate-x-1/2 -translate-y-1/2"
           style={{
             background:
-              "radial-gradient(ellipse 60% 55% at 50% 50%, hsl(222 56% 6% / 0.82) 0%, hsl(222 56% 6% / 0.5) 45%, transparent 75%)",
+              "radial-gradient(ellipse 58% 50% at 50% 50%, hsl(222 56% 6% / 0.72) 0%, hsl(222 56% 6% / 0.4) 45%, transparent 72%)",
           }}
         />
         <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-primary">

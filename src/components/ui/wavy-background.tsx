@@ -46,7 +46,7 @@ export const WavyBackground = ({
     if (!ctx) return;
 
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const getSpeed = () => (speed === "fast" ? 0.0014 : 0.0008);
+    const getSpeed = () => (speed === "fast" ? 0.0026 : 0.0014);
     const waveColors = colors ?? ["#38bdf8", "#818cf8", "#c084fc", "#e879f9", "#22d3ee"];
 
     let w = 0;
