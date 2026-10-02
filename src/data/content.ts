@@ -18,7 +18,7 @@ export const profile = {
 export const about = {
   paragraphs: [
     "I'm a cloud security, identity and vulnerability management engineer. I work across Azure, Microsoft Entra ID and Defender for Cloud, assessing and remediating security posture across enterprise Azure, AWS, Microsoft 365 and hybrid tenants. I'm currently a Cyber Security Consultant at Arctic Wolf, the designated security engineer for a portfolio of enterprise customers.",
-    "Before that I spent eight years in engineering roles at Wipro, Commvault, Hewlett Packard Enterprise and Tata Consultancy Services, from a 10,000-user Active Directory estate to Microsoft security stacks across five enterprise tenants, then completed an MSc in Cybersecurity Risk Management at the University of Galway. I prioritise by exploitability and business impact, give every finding an owner and a date, and explain risk in the language of the team that has to fix it.",
+    "Before that I spent eight years in engineering roles at Wipro, Commvault, Hewlett Packard Enterprise and Tata Consultancy Services, from a 10,000-user Active Directory estate to Microsoft security stacks across five enterprise tenants, then completed an MSc in Cybersecurity Risk Management at the University of Galway. My approach is risk-based: I prioritise remediation by exploitability and business impact, tie each finding to a named owner, a timeline and the NIST CSF or CIS control it maps to, and report it in terms both technical teams and executives can act on.",
   ],
 };
 
