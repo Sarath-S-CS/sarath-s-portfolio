@@ -7,7 +7,7 @@ export const profile = {
   name: "Sarath Surendran",
   title: "Cybersecurity Engineer",
   tagline:
-    "Cloud, hybrid and on-premises security. Identity, vulnerability management and DevSecOps across Azure, AWS and Microsoft 365.",
+    "Cloud security, identity and vulnerability management across Azure, AWS, Microsoft 365 and on-prem.",
   location: "Dublin, Ireland",
   email: "sarath2552@gmail.com",
   linkedin: "https://www.linkedin.com/in/sarath-surendran",
@@ -26,7 +26,7 @@ export const about = {
 export const skills: { group: string; items: string[] }[] = [
   {
     group: "Cloud & platform security",
-    items: ["Defender for Cloud (CSPM)", "Azure", "AWS", "Microsoft 365", "CIS Benchmarks", "Azure Policy", "Docker", "Kubernetes"],
+    items: ["Defender for Cloud (CSPM)", "Azure", "AWS", "Microsoft 365", "CIS Benchmarks", "Secure configuration baselines", "Azure Policy"],
   },
   {
     group: "Identity & access management",
@@ -45,8 +45,16 @@ export const skills: { group: string; items: string[] }[] = [
     items: ["Microsoft Sentinel (KQL)", "Splunk (SPL)", "Purview", "Defender for Endpoint", "ServiceNow"],
   },
   {
-    group: "Automation & scripting",
-    items: ["PowerShell", "Python", "Bash", "Microsoft Copilot", "Claude", "GitHub Actions"],
+    group: "DevSecOps & pipeline security",
+    items: ["CI/CD security", "Terraform", "Jenkins", "Docker", "Kubernetes", "Helm", "SAST", "DAST", "Container scanning", "GitHub Actions"],
+  },
+  {
+    group: "On-prem & hybrid infrastructure",
+    items: ["Windows Server", "Linux", "VMware ESXi", "Hyper-V", "Group Policy", "LDAP"],
+  },
+  {
+    group: "Automation & AI",
+    items: ["PowerShell", "Python", "Bash", "Microsoft Copilot", "Claude"],
   },
 ];
 
