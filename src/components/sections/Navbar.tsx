@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar-1";
 import { navLinks, profile } from "@/data/content";
 
 // Sticky top bar. Gains a solid navy background once the page scrolls, and
@@ -31,9 +32,12 @@ export function Navbar() {
       >
         <a
           href="#top"
-          className="font-display text-base font-bold tracking-tight text-foreground"
+          className="inline-flex items-center gap-2.5 font-display text-base font-bold tracking-tight text-foreground"
         >
-          <span className="text-primary">{"</>"}</span> Sarath&nbsp;Surendran
+          <Avatar>
+            <AvatarFallback>SS</AvatarFallback>
+          </Avatar>
+          Sarath&nbsp;Surendran
         </a>
 
         <ul className="hidden items-center gap-8 md:flex">

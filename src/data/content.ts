@@ -54,8 +54,8 @@ export interface Project {
   title: string;
   description: string;
   stack: string[];
-  href: string;
-  cta: string;
+  href?: string;
+  cta?: string;
 }
 
 export const projects: Project[] = [
@@ -82,6 +82,12 @@ export const projects: Project[] = [
     stack: ["CI/CD security", "SAST", "DAST", "Docker", "Kubernetes", "IaC"],
     href: "https://tryhackme.com/path/outline/devsecops",
     cta: "View path",
+  },
+  {
+    title: "AWS infrastructure automation",
+    description:
+      "A 3-tier AWS architecture provisioned with Terraform and a Jenkins CI/CD pipeline. Microservices deploy to Kubernetes with Docker and Helm; services talk over Kafka behind an API gateway; Prometheus, Grafana, Fluentd and Elasticsearch give centralised metrics and logging; and Snyk container scanning runs inside the pipeline.",
+    stack: ["AWS", "Terraform", "Jenkins", "Docker", "Kubernetes", "Helm", "Prometheus", "Grafana", "Fluentd", "Elasticsearch", "Snyk", "SonarQube", "Git"],
   },
 ];
 

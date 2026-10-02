@@ -1,8 +1,8 @@
-import { BorderBeamPanel } from "@/components/ui/border-beam-panel";
+import { BeamBorder } from "@/components/ui/border-beam";
 import { projects } from "@/data/content";
 
-// Three project cards in a grid. Each card is a BorderBeamPanel: a dark panel
-// with a light that travels its border and speeds up on hover/focus.
+// Project cards, each wrapped in an animated BeamBorder (a light that travels
+// the card's border). Four cards sit in a two-column grid on larger screens.
 export function Projects() {
   return (
     <section id="projects" className="mx-auto max-w-6xl px-5 py-24 sm:px-8">
@@ -15,18 +15,21 @@ export function Projects() {
         </h2>
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-3">
+      <div className="grid items-stretch gap-6 md:grid-cols-2">
         {projects.map((project) => (
-          <BorderBeamPanel
+          <BeamBorder
             key={project.title}
-            beams={2}
-            thickness={2}
-            radius={18}
-            glow
-            colors={["#1f8fff", "#22d3ee"]}
-            className="!bg-card p-0"
+            size="md"
+            colorVariant="colorful"
+            theme="dark"
+            active
+            strength={1}
+            duration={6.3}
+            beamWidth={1}
+            backgroundColor="#0b1324"
+            className="h-full"
           >
-            <div className="flex h-full flex-col p-6">
+            <div className="flex h-full flex-col">
               <h3 className="font-display text-xl font-semibold text-foreground">
                 {project.title}
               </h3>
@@ -45,27 +48,29 @@ export function Projects() {
                 ))}
               </ul>
 
-              <a
-                href={project.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 inline-flex w-fit items-center gap-1.5 rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
-              >
-                {project.cta}
-                <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
-                  <path
-                    d="M5 2.5h6.5V9M11 3L3 11"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.6"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-                <span className="sr-only"> (opens in a new tab)</span>
-              </a>
+              {project.href && (
+                <a
+                  href={project.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 inline-flex w-fit items-center gap-1.5 rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+                >
+                  {project.cta ?? "View project"}
+                  <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+                    <path
+                      d="M5 2.5h6.5V9M11 3L3 11"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.6"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  <span className="sr-only"> (opens in a new tab)</span>
+                </a>
+              )}
             </div>
-          </BorderBeamPanel>
+          </BeamBorder>
         ))}
       </div>
     </section>

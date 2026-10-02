@@ -1,4 +1,5 @@
 import { WavyBackground } from "@/components/ui/wavy-background";
+import { LiquidMetalButton } from "@/components/ui/liquid-metal-button";
 import { profile } from "@/data/content";
 
 // Hero: animated canvas waves (electric blues on deep navy) behind a bold
@@ -25,16 +26,15 @@ export function Hero() {
               "radial-gradient(ellipse 60% 55% at 50% 50%, hsl(222 56% 6% / 0.82) 0%, hsl(222 56% 6% / 0.5) 45%, transparent 75%)",
           }}
         />
-        <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-border bg-background/40 px-4 py-1.5 text-sm text-muted-foreground backdrop-blur-sm">
-          <span className="h-2 w-2 rounded-full bg-primary" aria-hidden="true" />
-          Open to roles · {profile.location}
+        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-primary">
+          Hi, my name is
         </p>
 
         <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-foreground glow-text sm:text-6xl md:text-7xl">
           {profile.name}
         </h1>
 
-        <p className="mt-4 font-display text-xl font-medium text-primary sm:text-2xl">
+        <p className="mt-5 text-lg font-medium tracking-wide text-slate-200/95 sm:text-xl">
           {profile.title}
         </p>
 
@@ -42,19 +42,9 @@ export function Hero() {
           {profile.tagline}
         </p>
 
-        <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-          <a
-            href="#projects"
-            className="inline-flex h-12 items-center justify-center rounded-full bg-primary px-7 text-sm font-semibold text-primary-foreground shadow-[0_0_30px_-6px_hsl(var(--primary))] transition-transform duration-200 hover:scale-[1.03] hover:bg-primary/90"
-          >
-            View projects
-          </a>
-          <a
-            href="#contact"
-            className="inline-flex h-12 items-center justify-center rounded-full border border-border bg-background/30 px-7 text-sm font-semibold text-foreground backdrop-blur-sm transition-colors duration-200 hover:border-primary hover:text-primary"
-          >
-            Get in touch
-          </a>
+        <div className="mt-9 flex flex-col gap-4 sm:flex-row">
+          <LiquidMetalButton href="#projects" label="View projects" tone="azure" />
+          <LiquidMetalButton href="#contact" label="Get in touch" tone="steel" />
         </div>
       </WavyBackground>
     </section>
